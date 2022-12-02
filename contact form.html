@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+            <link rel="icon" type="image/x-icon" href="favicon.png">
+	<title>
+		Survey Form
+	</title>
+
+	<style>
+
+		/* Styling the Body element i.e. Color,
+		Font, Alignment */
+		body {
+			background: url("bg.jpg");
+			font-family: Verdana;
+			text-align: center;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input,
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  border-radius: 12px;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+		}
+.button1:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+	</style>
+</head>
+
+<body>
+	<header class="header">
+      <nav>
+        <a href="index.html">Back to home</a>
+        <a href="second page.html">Previous page</a>
+      </nav>
+    </header>
+	<h1> <font color="yellow"> Fill in our Survey Form </font></h1>
+
+	<!-- Create Form -->
+	<form id="form" method="POST"
+              action=
+    "mailto: kellywilliams.au@gmail.com"
+              enctype="multipart/form-data"
+
+		<!-- Details -->
+		<div class="form-control">
+			<label for="name" id="label-name">
+				Name
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="name"
+				placeholder="Enter your name e.g Aggrey or Kelly" required/>
+		</div>
+		<div class="form-control">
+			<label for="email" id="label-email">
+				Email
+			</label>
+
+			<!-- Input Type Email-->
+			<input type="email"
+				id="email"
+				placeholder="Enter your email" required />
+		</div>
+
+		<div class="form-control">
+			<label for="age" id="label-age">
+				Age
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="age"
+				placeholder="Enter your age" required max length="2"/>
+		</div>
+
+		<div class="form-control">
+			<label for="role" id="label-role">
+				Which option best describes you?
+			</label>
+			
+			<!-- Dropdown options -->
+			<select name="role" id="role">
+				<option value="student">Student</option>
+				<option value="intern">Intern</option>
+				<option value="professional">
+					Professional
+				</option>
+				<option value="other">Other</option>
+			</select>
+		</div>
+
+		<div class="form-control">
+			<label>
+				Would you recommend this website
+				to a friend?
+			</label>
+
+			<!-- Input Type Radio Button -->
+			<label for="recommed-1">
+				<input type="radio"
+					id="recommed-1"
+					name="recommed">Yes
+			</label>
+			<label for="recommed-2">
+				<input type="radio"
+					id="recommed-2"
+					name="recommed">No
+			</label>
+			<label for="recommed-3">
+				<input type="radio"
+					id="recommed-3"
+					name="recommed">Maybe
+			</label>
+		</div>
+
+		<div class="form-control">
+			<label>Languages and Frameworks known for web designing
+				<small>(Check all that apply)</small>
+			</label>
+			<!-- Input Type Checkbox -->
+			<label for="inp-1">
+				<input type="checkbox"
+					name="inp">Objective C</label>
+			<label for="inp-2">
+				<input type="checkbox"
+					name="inp">C++</label>
+			<label for="inp-3">
+				<input type="checkbox"
+					name="inp">C#</label>
+			<label for="inp-4">
+				<input type="checkbox"
+					name="inp">Java</label>
+			<label for="inp-5">
+				<input type="checkbox"
+					name="inp">Python</label>
+			<label for="inp-6">
+				<input type="checkbox"
+					name="inp">JavaScript</label>
+			<label for="inp-7">
+				<input type="checkbox"
+					name="inp">Html</label>
+			<label for="inp-7">
+				<input type="checkbox"
+					name="inp">Angular</label>
+			<label for="inp-7">
+				<input type="checkbox"
+					name="inp">Django</label>
+			<label for="inp-7">
+				<input type="checkbox"
+					name="inp">CSS</label>
+          	</div>
+		<div class="form-control">
+			<label for="comment">
+				Any comments or suggestions
+			</label>
+
+			<!-- multi-line text input control -->
+			<textarea name="comment" id="comment"
+				placeholder="Enter your comment here">
+			</textarea>
+              <input type="hidden" name="You are dumb" style="display:none !important">
+		</div>
+
+		<!-- Multi-line Text Input Control -->
+               
+		<button class="button button1"> Submit  </button>
+	
+         
+	</form>
+</body>
+
+</html>
